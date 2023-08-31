@@ -2,13 +2,12 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "typecheck": "nuxt typecheck",
-    "lint": "eslint --max-warnings 0 .",
-    "fmt": "prettier --write .",
+    "build": "nx exec -- nuxt build",
+    "preview": "nx exec -- nuxt preview",
+    "typecheck": "nx exec -- nuxt typecheck",
+    "lint": "nx exec -- eslint --max-warnings 0 .",
+    "fmt": "nx exec -- prettier --write .",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
@@ -19,7 +18,18 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "nuxt": "^3.7.0",
+    "nx": "16.7.4",
     "prettier": "^3.0.3",
     "vue-tsc": "^1.8.8"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": [
+          "{projectRoot}/.output",
+          "{projectRoot}/dist"
+        ]
+      }
+    }
   }
 }
