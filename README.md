@@ -1,63 +1,75 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Nuxt NFT Marketplace
 
 ## Setup
 
-Make sure to install the dependencies:
+### Install pnpm
 
-```bash
-# npm
-npm install
+Install pnpm globally using the following command, which is a performant node package manager.
 
-# pnpm
+```sh
+npm install -g pnpm
+```
+
+### Installing dependencies
+
+Make sure to install dependencies using:
+
+```sh
 pnpm install
-
-# yarn
-yarn install
 ```
 
-## Development Server
+### Git Hooks
 
-Start the development server on `http://localhost:3000`:
+Setup git hooks.
 
 ```bash
-# npm
-npm run dev
+git config core.hooksPath .githooks
+```
 
-# pnpm
+## Developing
+
+To start a development server:
+
+```bash
 pnpm run dev
-
-# yarn
-yarn dev
 ```
 
-## Production
+## Building
 
-Build the application for production:
+To create a production version of your app:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm run build
-
-# yarn
-yarn build
 ```
 
-Locally preview production build:
+## Previewing
+
+You can preview the production build with:
+
+```sh
+pnpm run preview
+```
+
+## Type Checking
+
+To validate the definitions of the types:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
+pnpm run typecheck
 ```
+
+## Linting
+
+Run the following command to lint the application.
+
+```bash
+pnpm run lint
+```
+
+## Deploying
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## License
+
+Nextjs Portfolio is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
