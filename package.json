@@ -6,11 +6,17 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "lint": "eslint --max-warnings 0 .",
     "fmt": "prettier --write .",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.41.0",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "nuxt": "^3.7.0",
     "prettier": "^3.0.3"
   }
