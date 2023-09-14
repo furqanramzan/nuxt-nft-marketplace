@@ -22,7 +22,9 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "flowbite": "^1.8.1",
     "flowbite-vue": "0.0.17-next.6",
-    "nuxt": "^3.7.0"
+    "nuxt": "^3.7.0",
+    "trpc-nuxt": "0.3",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.41.0",
