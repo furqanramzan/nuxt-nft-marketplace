@@ -21,6 +21,7 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "flowbite": "^1.8.1",
+    "flowbite-vue": "0.0.17-next.6",
     "nuxt": "^3.7.0"
   },
   "devDependencies": {
