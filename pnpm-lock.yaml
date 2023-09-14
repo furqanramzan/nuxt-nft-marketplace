@@ -32,6 +32,9 @@ dependencies:
   nuxt:
     specifier: ^3.7.0
     version: 3.7.0(eslint@8.48.0)(typescript@5.2.2)(vue-tsc@1.8.8)
+  nuxt-icon:
+    specifier: ^0.5.0
+    version: 0.5.0(vue@3.3.4)
   trpc-nuxt:
     specifier: '0.3'
     version: 0.3.7(@trpc/client@9.27.3)(@trpc/server@9.27.3)
@@ -1345,6 +1348,25 @@ packages:
       {
         integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==,
       }
+
+  /@iconify/types@2.0.0:
+    resolution:
+      {
+        integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==,
+      }
+    dev: false
+
+  /@iconify/vue@4.1.1(vue@3.3.4):
+    resolution:
+      {
+        integrity: sha512-RL85Bm/DAe8y6rT6pux7D2FJSiUEM/TPfyK7GrbAOfTSwrhvwJW+S5yijdGcmtXouA8MtuH9C7l4hiSE4mLMjg==,
+      }
+    peerDependencies:
+      vue: '>=3'
+    dependencies:
+      '@iconify/types': 2.0.0
+      vue: 3.3.4
+    dev: false
 
   /@ioredis/commands@1.2.0:
     resolution:
@@ -10147,6 +10169,20 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.3
+    dev: false
+
+  /nuxt-icon@0.5.0(vue@3.3.4):
+    resolution:
+      {
+        integrity: sha512-ND4yh8kW4VyIbORP3cWjgVrOAvy6QSDFDTJltakdqmxVfVysNIs/bx2NzlkHeR1EOS8E/jVcemfTPmRsJ7WUVw==,
+      }
+    dependencies:
+      '@iconify/vue': 4.1.1(vue@3.3.4)
+      '@nuxt/kit': 3.7.3
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - vue
     dev: false
 
   /nuxt@3.7.0(eslint@8.48.0)(typescript@5.2.2)(vue-tsc@1.8.8):

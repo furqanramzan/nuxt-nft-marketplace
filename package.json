@@ -28,6 +28,7 @@
     "flowbite-vue": "0.0.17-next.6",
     "mysql2": "^3.6.1",
     "nuxt": "^3.7.0",
+    "nuxt-icon": "^0.5.0",
     "trpc-nuxt": "0.3",
     "zod": "^3.22.2"
   },

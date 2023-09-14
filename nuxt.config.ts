@@ -4,7 +4,12 @@ export default defineNuxtConfig({
     strict: true,
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'trpc-nuxt'],
+  modules: [
+    'trpc-nuxt',
+    'nuxt-icon',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+  ],
   colorMode: {
     classSuffix: '',
   },
