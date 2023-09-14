@@ -15,13 +15,17 @@
     "fmtcheck": "nx exec -- prettier --list-different .",
     "precommit": "pnpm run fmt && pnpm run lint --fix",
     "precommitcheck": "nx affected -t=fmtcheck,lint,typecheck,build --parallel=4",
+    "migration": "nx exec -- drizzle-kit generate:mysql --schema=./server/database/schema.ts --out=./.migrations",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "drizzle-kit": "^0.19.13",
+    "drizzle-orm": "^0.28.6",
     "flowbite": "^1.8.1",
     "flowbite-vue": "0.0.17-next.6",
+    "mysql2": "^3.6.1",
     "nuxt": "^3.7.0",
     "trpc-nuxt": "0.3",
     "zod": "^3.22.2"
