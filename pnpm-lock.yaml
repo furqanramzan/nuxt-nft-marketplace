@@ -35,6 +35,9 @@ dependencies:
   flowbite-vue:
     specifier: 0.0.17-next.6
     version: 0.0.17-next.6(tailwindcss@3.3.3)(vue@3.3.4)
+  jose:
+    specifier: ^4.14.6
+    version: 4.14.6
   mysql2:
     specifier: ^3.6.1
     version: 3.6.1
@@ -8538,6 +8541,13 @@ packages:
       '@sideway/address': 4.1.4
       '@sideway/formula': 3.0.1
       '@sideway/pinpoint': 2.0.0
+    dev: false
+
+  /jose@4.14.6:
+    resolution:
+      {
+        integrity: sha512-EqJPEUlZD0/CSUMubKtMaYUOtWe91tZXTWMJZoKSbLk+KtdhNdcvppH8lA9XwVu2V4Ailvsj0GBZJ2ZwDjfesQ==,
+      }
     dev: false
 
   /js-tokens@4.0.0:

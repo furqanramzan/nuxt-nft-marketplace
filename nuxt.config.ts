@@ -11,4 +11,7 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
+  runtimeConfig: {
+    jwtSecret: '',
+  },
 });
