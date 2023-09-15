@@ -1,6 +1,6 @@
 import { router } from './trpc';
-import { greeting } from './greeting';
-import { user } from './user';
+import { greeting } from './routers/greeting';
+import { user } from './routers/user';
 
 export const appRouter = router({ greeting, user });
 
