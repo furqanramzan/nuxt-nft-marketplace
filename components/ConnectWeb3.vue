@@ -2,8 +2,13 @@
 const { $trpc } = useNuxtApp();
 const { signer, connect, isConnectable, isConnected } = useWeb3();
 
+const connectable = ref(false);
+
 onMounted(() => {
-  isConnected();
+  connectable.value = isConnectable();
+  if (connectable.value) {
+    isConnected();
+  }
 });
 
 async function login() {
@@ -16,7 +21,7 @@ async function login() {
 </script>
 
 <template>
-  <div v-if="isConnectable()">
+  <div v-if="connectable">
     <span v-if="signer">{{ signer.address }}</span>
     <button
       v-else
