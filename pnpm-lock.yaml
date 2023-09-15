@@ -14,6 +14,12 @@ dependencies:
   '@nuxtjs/tailwindcss':
     specifier: ^6.8.0
     version: 6.8.0(webpack@5.88.2)
+  '@trpc/client':
+    specifier: ^10.38.3
+    version: 10.38.3(@trpc/server@10.38.3)
+  '@trpc/server':
+    specifier: ^10.38.3
+    version: 10.38.3
   drizzle-kit:
     specifier: ^0.19.13
     version: 0.19.13
@@ -39,8 +45,8 @@ dependencies:
     specifier: ^0.5.0
     version: 0.5.0(vue@3.3.4)
   trpc-nuxt:
-    specifier: '0.3'
-    version: 0.3.7(@trpc/client@9.27.3)(@trpc/server@9.27.3)
+    specifier: ^0.10.12
+    version: 0.10.12(@trpc/client@10.38.3)(@trpc/server@10.38.3)
   zod:
     specifier: ^3.22.2
     version: 3.22.2
@@ -563,16 +569,6 @@ packages:
       '@babel/helper-create-class-features-plugin': 7.22.11(@babel/core@7.22.11)
       '@babel/helper-plugin-utils': 7.22.5
       '@babel/plugin-syntax-typescript': 7.22.5(@babel/core@7.22.11)
-    dev: false
-
-  /@babel/runtime@7.22.15:
-    resolution:
-      {
-        integrity: sha512-T0O+aa+4w0u06iNmapipJXMV4HoUir03hpx3/YqXXhu9xim3w+dVphjFWl1OH8NbZHw5Lbm9k45drDkgq2VNNA==,
-      }
-    engines: { node: '>=6.9.0' }
-    dependencies:
-      regenerator-runtime: 0.14.0
     dev: false
 
   /@babel/standalone@7.22.14:
@@ -1791,36 +1787,6 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@nuxt/kit@3.0.0:
-    resolution:
-      {
-        integrity: sha512-7ZsOLt5s9a0ZleAIzmoD70JwkZf5ti6bDdxl6f8ew7Huxz+ni/oRfTPTX9TrORXsgW5CvDt6Q9M7IJNPkAN/Iw==,
-      }
-    engines: { node: ^14.16.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 }
-    dependencies:
-      '@nuxt/schema': 3.0.0
-      c12: 1.4.2
-      consola: 2.15.3
-      defu: 6.1.2
-      globby: 13.2.2
-      hash-sum: 2.0.0
-      ignore: 5.2.4
-      jiti: 1.20.0
-      knitwork: 1.0.0
-      lodash.template: 4.5.0
-      mlly: 1.4.2
-      pathe: 1.1.1
-      pkg-types: 1.0.3
-      scule: 1.0.0
-      semver: 7.5.4
-      unctx: 2.3.1
-      unimport: 1.3.0
-      untyped: 1.4.0
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: false
-
   /@nuxt/kit@3.7.0:
     resolution:
       {
@@ -1897,30 +1863,6 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - webpack
-    dev: false
-
-  /@nuxt/schema@3.0.0:
-    resolution:
-      {
-        integrity: sha512-5fwsidhs5NjFzR8sIzHMXO0WFGkI3tCH3ViANn2W4N5qCwoYZ0n1sZBkQ9Esn1VoEed6RsIlTpWrPZPVtqNkGQ==,
-      }
-    engines: { node: ^14.16.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 }
-    dependencies:
-      c12: 1.4.2
-      create-require: 1.1.1
-      defu: 6.1.2
-      jiti: 1.20.0
-      pathe: 1.1.1
-      pkg-types: 1.0.3
-      postcss-import-resolver: 2.0.0
-      scule: 1.0.0
-      std-env: 3.4.3
-      ufo: 1.3.0
-      unimport: 1.3.0
-      untyped: 1.4.0
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
     dev: false
 
   /@nuxt/schema@3.7.0:
@@ -2767,22 +2709,21 @@ packages:
     engines: { node: '>= 10' }
     dev: false
 
-  /@trpc/client@9.27.3(@trpc/server@9.27.3):
+  /@trpc/client@10.38.3(@trpc/server@10.38.3):
     resolution:
       {
-        integrity: sha512-tFAGepqgvK8+V5PQycigCP2VUE34BNxlu+tXoq4jgXtdPUwlZsjfj/3L+jXuslK405oNNAx+r1BAekG2G7RgEA==,
+        integrity: sha512-hHPsElTL4sB+UGzuAZ4iwRVHjELrk/Nsl2owsYw9ITJz3EY7VWRsQ6vK48kJvlHPYPhP+efID5UOgyZMs4bFXA==,
       }
     peerDependencies:
-      '@trpc/server': 9.27.3
+      '@trpc/server': 10.38.3
     dependencies:
-      '@babel/runtime': 7.22.15
-      '@trpc/server': 9.27.3
+      '@trpc/server': 10.38.3
     dev: false
 
-  /@trpc/server@9.27.3:
+  /@trpc/server@10.38.3:
     resolution:
       {
-        integrity: sha512-RHWD9xjE+A9UaQCVYkqjl0sbGaHfvlUqJH3e1I57F2ztJbMeFYoP47pVgjkg0CLYSuRDa3imtD4dVDZ4DcODjQ==,
+        integrity: sha512-9s8/kwo2IDB5hwB2SKZZrfevRhdb1f9fdXtIYd3lbQuf2jQaC/LyQuHaIQjDQoUx9updBfsHXcFFPiCP1DL6pg==,
       }
     dev: false
 
@@ -4957,13 +4898,6 @@ packages:
         integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==,
       }
 
-  /consola@2.15.3:
-    resolution:
-      {
-        integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==,
-      }
-    dev: false
-
   /consola@3.2.3:
     resolution:
       {
@@ -5321,13 +5255,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
-
-  /dedent@0.7.0:
-    resolution:
-      {
-        integrity: sha512-Q6fKUPqnAHAyhiUgFU7BUzLiv0kd8saH9al7tnu5Q/okj6dnupxyTgFIBjVzJATdfIAm9NAsvXNzjaKa+bxVyA==,
-      }
-    dev: false
 
   /deep-equal@1.0.1:
     resolution:
@@ -11878,13 +11805,6 @@ packages:
       redis-errors: 1.2.0
     dev: false
 
-  /regenerator-runtime@0.14.0:
-    resolution:
-      {
-        integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==,
-      }
-    dev: false
-
   /regexp-tree@0.1.27:
     resolution:
       {
@@ -13079,28 +12999,20 @@ packages:
       }
     dev: false
 
-  /trpc-nuxt@0.3.7(@trpc/client@9.27.3)(@trpc/server@9.27.3):
+  /trpc-nuxt@0.10.12(@trpc/client@10.38.3)(@trpc/server@10.38.3):
     resolution:
       {
-        integrity: sha512-BwKp44HVxgJjaqSfO/svZbTNsUfK24Jkq3BTyp3Wys7Kky26P3TvNDzSu0sdibj3MAtPDfDqM50rVlHo0IQZpw==,
+        integrity: sha512-dLkdM8F8d5SYzEyJ4rF3F0GXbGzV5xAbfajZGxyxElaf5AW6K7WVizf/Fyb+L6J4kIGcuYqA2PFmB6BxZJ86uA==,
       }
     peerDependencies:
-      '@trpc/client': <10.0.0
-      '@trpc/server': <10.0.0
+      '@trpc/client': ^10.26.0
+      '@trpc/server': ^10.26.0
     dependencies:
-      '@nuxt/kit': 3.0.0
-      '@trpc/client': 9.27.3(@trpc/server@9.27.3)
-      '@trpc/server': 9.27.3
-      dedent: 0.7.0
-      defu: 6.1.2
+      '@trpc/client': 10.38.3(@trpc/server@10.38.3)
+      '@trpc/server': 10.38.3
       h3: 1.8.1
       ofetch: 1.3.3
       ohash: 1.1.3
-      pathe: 1.1.1
-      ufo: 1.3.0
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
     dev: false
 
   /ts-api-utils@1.0.2(typescript@5.2.2):
@@ -13432,27 +13344,6 @@ packages:
       '@unhead/schema': 1.4.1
       '@unhead/shared': 1.4.1
       hookable: 5.5.3
-    dev: false
-
-  /unimport@1.3.0:
-    resolution:
-      {
-        integrity: sha512-fOkrdxglsHd428yegH0wPH/6IfaSdDeMXtdRGn6en/ccyzc2aaoxiUTMrJyc6Bu+xoa18RJRPMfLUHEzjz8atw==,
-      }
-    dependencies:
-      '@rollup/pluginutils': 5.0.4(rollup@3.28.1)
-      escape-string-regexp: 5.0.0
-      fast-glob: 3.3.1
-      local-pkg: 0.4.3
-      magic-string: 0.27.0
-      mlly: 1.4.2
-      pathe: 1.1.1
-      pkg-types: 1.0.3
-      scule: 1.0.0
-      strip-literal: 1.3.0
-      unplugin: 1.4.0
-    transitivePeerDependencies:
-      - rollup
     dev: false
 
   /unimport@3.2.0:

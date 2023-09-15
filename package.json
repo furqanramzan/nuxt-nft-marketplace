@@ -22,6 +22,8 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@trpc/client": "^10.38.3",
+    "@trpc/server": "^10.38.3",
     "drizzle-kit": "^0.19.13",
     "drizzle-orm": "^0.28.6",
     "ethers": "^6.7.1",
@@ -30,7 +32,7 @@
     "mysql2": "^3.6.1",
     "nuxt": "^3.7.0",
     "nuxt-icon": "^0.5.0",
-    "trpc-nuxt": "0.3",
+    "trpc-nuxt": "^0.10.12",
     "zod": "^3.22.2"
   },
   "devDependencies": {
