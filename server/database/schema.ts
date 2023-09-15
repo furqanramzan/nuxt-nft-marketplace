@@ -12,12 +12,11 @@ export const users = mysqlTable(
   'users',
   {
     id: serial('id').primaryKey(),
-    name: varchar('name', { length: 256 }).notNull(),
-    email: varchar('email', { length: 256 }).notNull(),
+    address: varchar('address', { length: 256 }).notNull(),
     createdAt: timestamp('created_at').notNull().defaultNow(),
     updatedAt: timestamp('updated_at').notNull().defaultNow(),
   },
   (table) => ({
-    emailIdx: uniqueIndex('email_idx').on(table.email),
+    addressIdx: uniqueIndex('address_idx').on(table.address),
   }),
 );

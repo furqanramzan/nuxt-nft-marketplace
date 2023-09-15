@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "mysql",
-  "id": "c1940949-5bd4-4d47-960b-2bbcfa9d5d6d",
+  "id": "1520295a-747e-44b2-ada5-57eca9896198",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "nfmp_users": {
@@ -14,15 +14,8 @@
           "notNull": true,
           "autoincrement": true
         },
-        "name": {
-          "name": "name",
-          "type": "varchar(256)",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "email": {
-          "name": "email",
+        "address": {
+          "name": "address",
           "type": "varchar(256)",
           "primaryKey": false,
           "notNull": true,
@@ -46,9 +39,9 @@
         }
       },
       "indexes": {
-        "email_idx": {
-          "name": "email_idx",
-          "columns": ["email"],
+        "address_idx": {
+          "name": "address_idx",
+          "columns": ["address"],
           "isUnique": true
         }
       },

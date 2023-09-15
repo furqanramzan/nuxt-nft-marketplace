@@ -16,6 +16,7 @@ export function useWeb3() {
   async function connect() {
     const provider = getProvider();
     signer.value = await provider.getSigner();
+    return signer.value;
   }
 
   async function isConnected() {
