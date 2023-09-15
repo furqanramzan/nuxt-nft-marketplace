@@ -15,7 +15,7 @@ async function login() {
   const connectPromise = await promise(() => connect());
   if (connectPromise.success) {
     const { address } = connectPromise.data;
-    await $trpc.user.login.mutate(address);
+    await $trpc.guest.login.mutate(address);
   }
 }
 </script>

@@ -1,6 +1,8 @@
 const repository = getRepository('user');
 
-export const user = router({
+export const guest = router({
+  authenticate: guestProcedure.query(() => ({ success: true })),
+
   login: publicProcedure
     .input(z.string())
     .mutation(async ({ input, ctx: { event } }) => {

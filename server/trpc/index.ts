@@ -1,7 +1,7 @@
-import { router } from './trpc';
+import { auth } from './routers/auth';
 import { greeting } from './routers/greeting';
-import { user } from './routers/user';
+import { guest } from './routers/guest';
 
-export const appRouter = router({ greeting, user });
+export const appRouter = router({ greeting, guest, auth });
 
 export type AppRouter = typeof appRouter;
