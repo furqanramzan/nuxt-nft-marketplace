@@ -1,6 +1,18 @@
-import { BrowserProvider, type JsonRpcSigner } from 'ethers';
+import {
+  BrowserProvider,
+  type Eip1193Provider,
+  type JsonRpcSigner,
+} from 'ethers';
 
-declare let window: any;
+interface Ethereum extends Eip1193Provider {
+  isMetaMask: boolean;
+  isCoinbaseWallet: boolean;
+}
+declare global {
+  interface Window {
+    ethereum: Ethereum;
+  }
+}
 
 export function useWeb3() {
   const signer = ref<JsonRpcSigner>();
@@ -29,5 +41,20 @@ export function useWeb3() {
     return connected;
   }
 
-  return { signer, isConnectable, connect, isConnected };
+  function isMetaMask() {
+    return window.ethereum.isMetaMask;
+  }
+
+  function isCoinbase() {
+    return window.ethereum.isCoinbaseWallet;
+  }
+
+  return {
+    signer,
+    isConnectable,
+    connect,
+    isConnected,
+    isMetaMask,
+    isCoinbase,
+  };
 }
