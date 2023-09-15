@@ -7,7 +7,7 @@ interface ErrorResponse {
   error: unknown;
 }
 
-async function promise<T>(
+export async function promise<T>(
   callback: () => Promise<T>,
   logError = false,
 ): Promise<SuccessResponse<T> | ErrorResponse> {
@@ -21,5 +21,3 @@ async function promise<T>(
     return { success: false, error };
   }
 }
-
-export default promise;
