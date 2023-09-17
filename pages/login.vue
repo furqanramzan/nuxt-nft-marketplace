@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import WalletList from '~/components/WalletList.vue';
-
 definePageMeta({
   middleware: ['guest'],
 });

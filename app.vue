@@ -1,9 +1,12 @@
 <template>
   <NuxtLayout>
     <div
-      class="min-h-screen bg-gray-100 text-black dark:bg-gray-900 dark:text-white"
+      class="min-h-screen bg-light-primary text-black dark:bg-dark-primary dark:text-white"
     >
-      <NuxtPage />
+      <AppSidebar />
+      <div class="ml-16 flex flex-col">
+        <NuxtPage />
+      </div>
     </div>
   </NuxtLayout>
 </template>

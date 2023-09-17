@@ -1,18 +1,13 @@
-<script lang="ts" setup>
-import { Badge } from 'flowbite-vue';
-
-const { $trpc } = useNuxtApp();
-
-const greeting = await $trpc.greeting.home.useQuery();
-</script>
-
 <template>
-  <div class="flex h-screen w-screen flex-col items-center justify-center">
-    <template v-if="greeting.data.value">
-      <h1 class="text-2xl font-bold text-primary-600 sm:text-4xl lg:text-8xl">
-        {{ greeting.data.value.heading }}
-      </h1>
-      <Badge type="green">{{ greeting.data.value.message }}</Badge>
-    </template>
+  <div class="flex flex-col">
+    <h1>Home</h1>
+    <div>
+      <NuxtLink
+        to="/login"
+        class="inline-flex items-center rounded-lg bg-primary-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:bg-primary-500 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+      >
+        Connect Wallet
+      </NuxtLink>
+    </div>
   </div>
 </template>
