@@ -20,7 +20,7 @@ function toggleSidebar() {
 
 <template>
   <div
-    class="fixed left-0 top-0 flex h-screen w-16 flex-col bg-light-secondary py-10 text-gray-500 dark:bg-dark-secondary dark:text-gray-300"
+    class="fixed bottom-0 left-0 flex w-full bg-light-secondary text-gray-500 dark:bg-dark-secondary dark:text-gray-300 md:top-0 md:h-screen md:w-16 md:flex-col md:py-10"
   >
     <span
       v-for="(link, index) of links"
@@ -35,7 +35,7 @@ function toggleSidebar() {
         <Icon :name="link.icon" />
       </NuxtLink>
     </span>
-    <span class="mt-auto flex h-14 w-full items-center justify-center">
+    <span class="flex h-14 w-full items-center justify-center md:mt-auto">
       <button
         class="rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
         @click="toggleSidebar"
@@ -44,11 +44,10 @@ function toggleSidebar() {
         <Icon v-else name="material-symbols:arrow-circle-right" />
       </button>
     </span>
-    <DarkMode />
   </div>
   <aside
-    :class="{ '!w-0 !border-r-0': !sidebar }"
-    class="fixed left-16 top-0 z-40 h-screen w-64 overflow-x-hidden border-l border-r border-gray-200 bg-light-secondary py-6 pt-10 transition-all dark:border-gray-700 dark:bg-dark-secondary"
+    :class="{ '!w-64 !border-l': sidebar }"
+    class="fixed left-0 top-0 z-40 h-screen w-0 overflow-x-hidden border-gray-200 bg-light-secondary py-6 pt-10 transition-all dark:border-gray-700 dark:bg-dark-secondary md:left-16"
     aria-label="Sidebar"
   >
     <div class="h-full overflow-y-auto px-3">

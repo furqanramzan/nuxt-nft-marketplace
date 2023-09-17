@@ -4,7 +4,7 @@
       class="min-h-screen bg-light-primary text-black dark:bg-dark-primary dark:text-white"
     >
       <AppSidebar />
-      <div class="ml-16 flex flex-col">
+      <div class="flex flex-col md:ml-16">
         <NuxtPage />
       </div>
     </div>

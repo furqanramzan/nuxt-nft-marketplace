@@ -6,7 +6,7 @@ defineProps<{ wallet: Wallet }>();
 
 <template>
   <div
-    class="flex w-full flex-col items-center gap-5 rounded-lg border border-gray-200 bg-white py-10 shadow dark:border-gray-700 dark:bg-gray-800"
+    class="flex w-full flex-col items-center gap-5 rounded-lg border border-gray-200 bg-light-secondary py-10 shadow dark:border-gray-700 dark:bg-dark-secondary"
   >
     <NuxtImg
       placeholder
