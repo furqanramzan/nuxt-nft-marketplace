@@ -18,7 +18,7 @@ onMounted(() => {
   <button
     aria-label="Dark mode"
     type="button"
-    className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-200 text-sm text-gray-500 shadow-md hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+    className="flex items-center justify-center text-sm text-gray-500 hover:text-black focus:outline-none focus:ring-gray-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-700"
     @click="toggleTheme"
   >
     <Icon v-if="isDark" name="material-symbols:light-mode" />
