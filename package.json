@@ -6,7 +6,8 @@
     "pnpm": ">=8"
   },
   "scripts": {
-    "dev": "nuxt dev",
+    "sync": "nx exec -- nuxt prepare",
+    "dev": "nx exec -- nuxt dev",
     "build": "nx exec -- nuxt build",
     "preview": "nx exec -- nuxt preview",
     "typecheck": "nx exec -- nuxt typecheck",
@@ -16,44 +17,42 @@
     "precommit": "pnpm run fmt && pnpm run lint --fix",
     "precommitcheck": "nx affected -t=fmtcheck,lint,typecheck,build --parallel=4",
     "migration": "nx exec -- drizzle-kit generate:mysql --schema=./server/database/schema.ts --out=./.migrations",
-    "postinstall": "nuxt prepare"
+    "postinstall": "pnpm run sync"
   },
   "dependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/image": "1.0.0-rc.2",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "@trpc/client": "^10.38.3",
-    "@trpc/server": "^10.38.3",
+    "@trpc/client": "^10.38.4",
+    "@trpc/server": "^10.38.4",
     "drizzle-kit": "^0.19.13",
     "drizzle-orm": "^0.28.6",
     "ethers": "^6.7.1",
     "flowbite": "^1.8.1",
-    "flowbite-vue": "0.0.17-next.6",
+    "flowbite-vue": "0.0.17-next.10",
     "jose": "^4.14.6",
     "mysql2": "^3.6.1",
-    "nuxt": "^3.7.0",
+    "nuxt": "^3.7.3",
     "nuxt-icon": "^0.5.0",
     "trpc-nuxt": "^0.10.12",
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.41.0",
+    "@antfu/eslint-config": "^0.43.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "eslint": "^8.48.0",
+    "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "nx": "16.7.4",
+    "nx": "16.9.0",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.4",
-    "vue-tsc": "^1.8.8"
+    "vue-tsc": "^1.8.13"
   },
   "nx": {
     "targets": {
       "build": {
         "outputs": [
-          "{projectRoot}/.output",
-          "{projectRoot}/dist"
+          "{projectRoot}/.output"
         ]
       }
     }
