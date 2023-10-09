@@ -6,9 +6,9 @@ const links = [
     icon: 'material-symbols:home',
   },
   {
-    name: 'Login',
-    href: '/login',
-    icon: 'material-symbols:account-circle',
+    name: 'Create',
+    href: '/create',
+    icon: 'material-symbols:add-circle',
   },
 ];
 

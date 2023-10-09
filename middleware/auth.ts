@@ -3,6 +3,6 @@ export default defineNuxtRouteMiddleware(async () => {
   const authenticate = await promise(() => $trpc.auth.authenticate.query());
 
   if (!authenticate.success) {
-    return navigateTo('/connect');
+    return navigateTo('/login');
   }
 });
